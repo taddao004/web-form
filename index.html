@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <title>การสร้างฟอร์ม</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ccccff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-control, .form-check-input, .form-select {
+            border-radius: 0.375rem;
+        }
+        .form-label {
+            font-weight: 500;
+        }
+        .btn-custom {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h3 class="mb-4">ระบบลงทะเบียนสมัครสมาชิก</h3>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">ชื่อ</label>
+                <input type="text" id="name" name="name" class="form-control" maxlength="20">
+            </div>
+            <div class="mb-3">
+                <label for="lastname" class="form-label">นามสกุล</label>
+                <input type="text" id="lastname" name="lastname" class="form-control" maxlength="20">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">รหัสผ่าน</label>
+                <input type="password" id="password" name="password" class="form-control" maxlength="8">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">อายุ</label><br>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="age1" name="age" value="0" class="form-check-input">
+                    <label for="age1" class="form-check-label">15-20ปี</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="age2" name="age" value="1" class="form-check-input">
+                    <label for="age2" class="form-check-label">20-25ปี</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="age3" name="age" value="2" class="form-check-input">
+                    <label for="age3" class="form-check-label">25ปีขึ้นไป</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">ที่อยู่</label>
+                <textarea id="address" name="address" class="form-control" rows="5">กรอกข้อมูลที่อยู่</textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">วิชาเรียน</label><br>
+                <div class="form-check">
+                    <input type="checkbox" id="program" name="subject" value="program" class="form-check-input">
+                    <label for="program" class="form-check-label">Programming</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="network" name="subject" value="network" class="form-check-input">
+                    <label for="network" class="form-check-label">Networking</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="db" name="subject" value="db" class="form-check-input">
+                    <label for="db" class="form-check-label">Database</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="dept" class="form-label">เลือกแผนกวิชาที่ต้องการสมัคร</label>
+                <select id="dept" name="dept" class="form-select">
+                    <option value="1">เทคโนโลยีสารสนเทศ</option>
+                    <option value="2">คอมพิวเตอร์ธุรกิจ</option>
+                    <option value="3">อิเล็กทรอนิกส์</option>
+                    <option value="4">ไฟฟ้ากำลัง</option>
+                    <option value="5">เครื่องกล</option>
+                    <option value="6">ก่อสร้าง</option>
+                    <option value="7">เทคนิคคอมพิวเตอร์</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary btn-custom">ส่งข้อมูล</button>
+                <button type="reset" class="btn btn-secondary btn-custom">ล้างข้อมูล</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xr8g3nSjkCkJzY06AnE2n2eX7Zz1fF8h4JjgtSFn11l7Rs8wJ8Z5s7F6yXqD3M3v" crossorigin="anonymous"></script>
+</body>
+</html>
